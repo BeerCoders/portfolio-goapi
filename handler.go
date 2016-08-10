@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	env "github.com/BeerCOders/porfolio-go-api/enviroment"
+	env "github.com/BeerCOders/porfolio-goapi/enviroment"
 	"github.com/vardius/goserver"
 	"golang.org/x/net/context"
 )

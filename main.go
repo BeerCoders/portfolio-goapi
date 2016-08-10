@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	//	env "github.com/BeerCOders/porfolio-go-api/enviroment"
+	env "github.com/BeerCOders/porfolio-goapi/enviroment"
 	"github.com/EconomistDigitalSolutions/ramlapi"
 	"github.com/vardius/goserver"
 	"golang.org/x/net/context"
@@ -25,7 +25,7 @@ func main() {
 	api, _ := ramlapi.ProcessRAML("api.raml")
 	ramlapi.Build(api, routerFunc)
 
-	//	env.Log.Critical(context.TODO(), "%s", http.ListenAndServe(":"+*programPort, env.Server))
+	env.Log.Critical(context.TODO(), "%s", http.ListenAndServe(":"+*programPort, env.Server))
 }
 
 func routerFunc(ep *ramlapi.Endpoint) {
